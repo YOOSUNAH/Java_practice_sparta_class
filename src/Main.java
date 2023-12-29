@@ -94,7 +94,7 @@ public class Main {
 
         // Wrapper class 변수
         int number = 21;
-        Integer num =  number;  // boxing
+        Integer num = number;  // boxing
         System.out.println(num.intValue()); // unboxing. 21이 출력됨.
 
         System.out.println("--------------------");
@@ -108,12 +108,89 @@ public class Main {
 //            System.out.println(ch);  // a가 출력됨.
 
         //문자 -> 숫자
-        Scanner sc = new Scanner(System.in);  // a를 입력하면
+//        Scanner sc = new Scanner(System.in);  // a를 입력하면
+//
+//        char letter = sc.nextLine().charAt(0); // 첫번째 글자만 받아오기위해 charAt(0) 메서드를 사용합니다.
+//        int asciiNumber = (int)letter; // 숫자로 형변환을 해주면 저장되어있던 아스키 숫자값으로 표현됩니다.
+//
+//        System.out.println(asciiNumber);  // 97이 출력됨.
+//
+        // -----------------------------------------------------
+        // 형 변환 예제 : 변수의 타입을 바꾸는 방법
+        // 문자열 -> 정수
+        // 정수 -> 실수
+        // 실수 -> 정수
 
-        char letter = sc.nextLine().charAt(0); // 첫번째 글자만 받아오기위해 charAt(0) 메서드를 사용합니다.
-        int asciiNumber = (int)letter; // 숫자로 형변환을 해주면 저장되어있던 아스키 숫자값으로 표현됩니다.
+        // double형 or float형 -> int
+        // 실수 -> 정수
+        // 0.xxxx -> 0
+        double doubleNum = 10.101010;
+        float floatNum = 10.101010f;
 
-        System.out.println(asciiNumber);  // 97이 출력됨.
+        // 변환 (int 로 )
+        int intNum;
+//        intNum = (int)doubleNum;  // double 형이 -> int 형으로 형변환이 됨
+//        System.out.println("Double Type => " + doubleNum);   // 10.10101 출력
+//        System.out.println("Int Type => " + intNum);  // 10 출력
+
+        intNum = (int) floatNum;
+        System.out.println("Float Type => " + floatNum);   // 10.10101 출력
+        System.out.println("Int Type => " + intNum);  // 10 출력
+        System.out.println("--------------------");
+
+        //정수 -> 실수
+         int intNumber2 = 10;
+         double doubleNumber2 = (double)intNumber2;
+         float floatnumber2 = (float)intNumber2;
+        System.out.println("intNumber2 => " + intNumber2);  // 10 출력
+        System.out.println("doubleNumber2 => " + doubleNumber2);  // 10.0 출력
+        System.out.println("floatnumber2 => " + floatnumber2);  // 10.0 출력
+        System.out.println("--------------------");
+
+        // -----------------------------------------------------
+        // 변수 타입별 크기 순서
+        // byte(1) -> short(2) -> int(4) -> long(8) -> float(4) -> double(8)
+
+        // byte(1byte) -> int(4byte)
+        byte byteNumber2 = 10;
+        int intNumber3 = byteNumber2;  // 자동으로 int로 형변환됨.
+        System.out.println(intNumber3);  // 10 출력
+
+        // char(1byte) -> int(4byte)  형변환
+        char charAlphabet = 'A';
+        intNumber3 = charAlphabet; // char -> int 로 자동 형변환
+        System.out.println(intNumber3); // 65 출력 (대분자 A가 가지고 있는 유니코드)
+
+        // int -> long number 형변환
+        intNumber3 = 100;
+        long longNumber2 = intNumber3;
+        System.out.println(longNumber2);  // 100으로 출력
+
+        // int -> double 형 변환
+        intNumber3 = 200;
+        double doubleNumber3 = intNumber3;
+        System.out.println(doubleNumber3); // 200.0
+
+        System.out.println("--------------------");
+        // -----------------------------------------------------
+
+        // 작은 크기의 타입이 큰 크기의 타입과 '계산'될 때,
+        // 자동으로 큰 크기으 ㅣ타입으로 형 변환이 됩니다.
+        int intNumber4 = 10;  // 정수
+        double doubleNumber4 = 5.5;  // 실수
+        double result = intNumber4 + doubleNumber4; // double이 표혈할 수 있는게 더 크기 땨문에 double형 타입을 따라가야 함.
+
+        System.out.println("Plus => " + result); // 15.5
+
+        // 정수로 나누기
+        int iResult = intNumber4 / 4;  // 2.5
+        System.out.println(iResult);  // 2 출력
+
+        // 실수로 나누기
+        double dResult = intNumber4 / 4.0;
+        System.out.println(dResult); // 2.5 출력
+
+
 
     }
 }
