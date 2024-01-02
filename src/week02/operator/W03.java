@@ -1,4 +1,4 @@
-package week02;
+package week02.operator;
 
 public class W03 {
     // 비교 연산자 예제

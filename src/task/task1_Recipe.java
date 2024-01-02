@@ -28,7 +28,7 @@ public class task1_Recipe {
         String process7 = sc.nextLine();
         String process8 = sc.nextLine();
         String process9 = sc.nextLine();
-        String iprocess10 = sc.nextLine();
+        String process10 = sc.nextLine();
 
         System.out.println("[" + dishTitle + "]");
         int intRate = (int)rate;
@@ -44,7 +44,7 @@ public class task1_Recipe {
         System.out.println("7." + process7);
         System.out.println("8." + process8);
         System.out.println("9." + process9);
-        System.out.println("10." + iprocess10);
+        System.out.println("10." + process10);
 
     }
 }
