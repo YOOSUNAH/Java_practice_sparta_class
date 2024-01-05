@@ -1,4 +1,4 @@
-package task;
+package personalPractice;
 
 import java.util.*;
 
